@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.00">
+	<title>You Got Wurmp'd</title>
+	<link rel="icon" type="image/x-icon" href="favicon.png">
+
+	<!-- Preview Content -->
+	<meta property="og:title" content="Glue on YOUR Glasses? Likely" />
+	<meta property="og:description" content="Carless Vandal has been caught wiping glue on innocents' glasses." />
+	<meta property="og:image" content="./glueGoblin.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="1097" />
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+		}
+		html {
+			min-width: 300px;
+		}
+		header {
+			width: 100vw;
+			height: 20vh;
+			display: flex;
+			z-index: 1;
+		}
+		main {
+			width:100vw;
+			height:80vh;
+		}
+
+		.neon {
+			position: relative;
+			overflow: hidden;
+			filter: brightness(200%);
+			width: 100%;
+		}
+
+		.text {
+			background-color: black;
+			color: white;
+			font-size: 100px;
+			font-weight: bold;
+			font-family: sans-serif;
+			text-transform: uppercase;
+			position: relative;
+			user-select: none;
+			width: 100%;
+			height: 97%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		.text::before {
+			content: attr(data-text);
+			position: absolute;
+			color: white;
+			filter: blur(0.02em);
+			mix-blend-mode: difference;
+		}
+
+		.gradient {
+			position: absolute;
+			background: linear-gradient(90deg, pink, magenta,pink,magenta,pink,magenta,pink,magenta,pink,magenta,pink,magenta,pink);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			mix-blend-mode: multiply;
+		}
+
+		.spotlight {
+			position: absolute;
+			top: -100%;
+			left: -100%;
+			right: 0;
+			bottom: 0;
+			background: 
+				radial-gradient(
+					circle,
+					white,
+					transparent 25%
+				) center / 25% 25%,
+				radial-gradient(
+					circle,
+					white,
+					black 25%
+				) center / 12.5% 12.5%;
+			animation: light 5s linear infinite;
+			mix-blend-mode: color-dodge;
+		}
+
+		@keyframes light {
+			to {
+				transform: translate(50%, 50%);
+			}
+		}
+
+		@media only screen and (max-width: 719px) {
+			.text {
+				font-size: 50px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div class="neon">
+			<span class="text" data-text="Get Wurmp'd">Get Wurmp'd</span>
+			<span class="gradient"></span>
+			<span class="spotlight"></span>
+		</div>
+	</header>
+	<main>
+		<iframe 
+			style="width:100%;height:100%;z-index: 0;" 
+			title="Wurmple"
+			frameborder="0" 
+			allowfullscreen 
+			mozallowfullscreen="true"
+			webkitallowfullscreen="true" 
+			allow="autoplay; fullscreen; xr-spatial-tracking" 
+			xr-spatial-tracking 
+			execution-while-out-of-viewport 
+			execution-while-not-rendered 
+			web-share 
+			src="https://sketchfab.com/models/f17abb48ae114b33bb6d7ad1fa9d1ee5/embed"> 
+		</iframe> 
+	</main>
+</body>
+</html>
